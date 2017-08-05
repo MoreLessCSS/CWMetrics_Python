@@ -49,6 +49,6 @@ for metric in config['metrics']:
             ]
         pprint(pushMetrics)
         client = CWMetricWriter(config['region'])
-        value = client.send_metrics()
+        value = client.example_send_metric()
 
         #metric[moduleConfig]['namespace'], MetricData
