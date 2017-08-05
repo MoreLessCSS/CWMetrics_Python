@@ -47,8 +47,8 @@
       <file leaf-file-name="CWMetricWriter.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/CWMetricWriter.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="637">
-              <caret line="52" column="8" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="61" selection-end-column="65" />
+            <state relative-caret-position="272">
+              <caret line="16" column="67" lean-forward="false" selection-start-line="16" selection-start-column="67" selection-end-line="16" selection-end-column="67" />
               <folding />
             </state>
           </provider>
@@ -796,8 +796,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/CWMetricWriter.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="637">
-          <caret line="52" column="8" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="61" selection-end-column="65" />
+        <state relative-caret-position="272">
+          <caret line="16" column="67" lean-forward="false" selection-start-line="16" selection-start-column="67" selection-end-line="16" selection-end-column="67" />
           <folding />
         </state>
       </provider>

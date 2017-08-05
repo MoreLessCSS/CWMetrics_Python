@@ -12,6 +12,10 @@ class CWMetricWriter(object):
             aws_secret_access_key='UZduH/vO4YgmcUHuYWps3m2D8eSBSyriq0meFdg5'
             )
 
+    def _get_instance_metadata(self):
+            metadata = get_instance_metadata()
+            return metadata['instance-id'], metadata['instance-type']
+
     def send_metrics_old(self):
             MetricData=[
                         {
@@ -53,9 +57,7 @@ class CWMetricWriter(object):
                    'AveragePostRequestDuration': 2.2}
         self.send_metrics(metadata[0], metadata[1], metrics, "Milliseconds")
 
-     def _get_instance_metadata(self):
-        metadata = get_instance_metadata()
-        return metadata['instance-id'], metadata['instance-type']
+
 
     def _get_instance_metadata(self):
         metadata = get_instance_metadata()
