@@ -55,4 +55,4 @@ class CWMetricWriter(object):
         metadata = self._get_instance_metadata()
         metrics = {'AverageGetRequestDuration': 1.2,
                    'AveragePostRequestDuration': 2.2}
-        self.send_metrics(metadata[0], metadata[1], metrics, "Milliseconds")
+        send_metrics(metadata[0], metadata[1], metrics, "Milliseconds")
