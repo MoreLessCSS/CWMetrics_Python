@@ -1,0 +1,23 @@
+{
+    "metrics": [
+        {
+            "CheckPort24224" : {
+
+                "plugin" : "PortMonitor",
+                "domain": "localhost",
+                "port": "24224",
+                "namespace": "Vendo-ZML-Monitor",
+                "description": "Monitors port 24224"
+            },
+            "CheckPort22" : {
+
+                "plugin" : "PortMonitor",
+                "domain": "localhost",
+                "port": "22",
+                "namespace": "Vendo-ZML-Monitor",
+                "description": "Monitors port 22"
+            }
+
+        }
+    ]
+}

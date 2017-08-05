@@ -1,0 +1,28 @@
+{
+    "metrics": [
+        {
+            "CheckPort9200" : {
+                "module" : "PortMonitor",
+                "domain": "localhost",
+                "port": "9200",
+                "namespace": "Vendo-ZML-Monitor",
+                "description": "Monitors port 9200"
+            },
+            "CheckPort9300" : {
+                "module" : "PortMonitor",
+                "domain": "localhost",
+                "port": "9300",
+                "namespace": "Vendo-ZML-Monitor",
+                "description": "Monitors port 9300"
+            },
+            "CheckPort22" : {
+                "module" : "PortMonitor",
+                "domain": "localhost",
+                "port": "22",
+                "namespace": "Vendo-ZML-Monitor",
+                "description": "Monitors port 22"
+            }
+        }
+    ],
+    "region": "eu-central-1"
+}

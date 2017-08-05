@@ -1,0 +1,37 @@
+{
+    "metrics": [
+        {
+            "CheckPort9200" : {
+
+                "plugin" : "PortMonitor",
+                "domain": "localhost",
+                "port": "9200",
+                "namespace": "Vendo-ZML-Monitor",
+                "description": "Monitors port 9200"
+            },
+            "CheckPort9300" : {
+
+                "plugin" : "PortMonitor",
+                "domain": "localhost",
+                "port": "9300",
+                "namespace": "Vendo-ZML-Monitor",
+                "description": "Monitors port 9300"
+            },
+            "CheckPort22" : {
+
+                "plugin" : "PortMonitor",
+                "domain": "localhost",
+                "port": "22",
+                "namespace": "Vendo-ZML-Monitor",
+                "description": "Monitors port 22"
+            },
+            "ElasticHealthCheck" : {
+                "plugin" : "ESHealthCheck",
+                "elasticUrl": "return.json",
+                "namespace": "Vendo-ZML-Monitor",
+                "description": "elastic health check _cluster/health"
+            }
+
+        }
+    ]
+}
