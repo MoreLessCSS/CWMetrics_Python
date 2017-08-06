@@ -18,8 +18,8 @@ def connect(region):
 
 
 def send_metrics(varNamespace, instanceId, instanceType, varMetric, varValue, unit, dimensions):
-       client = connect('eu-central-1')
-       client.put_metric_data(varNamespace, varMetric, varValue, unit=unit, dimensions=dimensions)
+       client = connect(config['region'])
+       client.client.put_metric_data(varNamespace, varMetric, varValue, unit=unit, dimensions=dimensions)
 
 for metric in config['metrics']:
     # print ("METRIC:\n" + config['metrics'] + "\n")
