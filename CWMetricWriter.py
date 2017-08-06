@@ -5,7 +5,6 @@ import pprint
 
 
 class CWMetricWriter(object):
-    CW_NAMESPACE='test'
 
     def __init__(self, region):
         self.connection = cloudwatch.connect_to_region(
