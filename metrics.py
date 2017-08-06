@@ -40,7 +40,7 @@ for metric in config['metrics']:
 
         print (metric[moduleConfig]['module'])
 
-        value = send_metrics('eu-central-1', varNamespace', 'instanceId', 'instanceType', metric[moduleConfig]['module'], metricValue, units, dimensions)
+        value = send_metrics('eu-central-1', 'varNamespace', 'instanceId', 'instanceType', metric[moduleConfig]['module'], metricValue, units, dimensions)
 
 
 
