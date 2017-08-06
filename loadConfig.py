@@ -2,12 +2,11 @@ import json
 import sys
 import os
 
-
 def getConfigFile():
     try:
          appDir = os.path.dirname(os.path.abspath(__file__))
          f=str(appDir)
-         filename = (f + '/config/MasterNode/config.json')
+         filename = (f + 'config.json')
          filename=str(filename)
          print ("filename:" + filename + "\n")
          with open(filename) as data_file:
