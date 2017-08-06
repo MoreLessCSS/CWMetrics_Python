@@ -18,7 +18,7 @@ dimensions = {'InstanceId': InstanceMetaData[0],
 for metric in config['metrics']:
     for moduleConfig in metric:
         moduleName = metric[moduleConfig]['module']
-        from moduleName import moduleName
+        from "moduleName" import "moduleName"
 
         var = moduleName(metric[moduleConfig], moduleName)
 
