@@ -8,7 +8,7 @@ from boto.ec2 import cloudwatch
 from boto.utils import get_instance_metadata
 
 config = loadConfig.getConfigFile()
-client = CWMetricWriter.connect(config['region'])
+client = CWMetricWriter(config['region'])
 
 for metric in config['metrics']:
     # print ("METRIC:\n" + config['metrics'] + "\n")
