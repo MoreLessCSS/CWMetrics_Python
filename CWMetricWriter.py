@@ -15,7 +15,7 @@ class CWMetricWriter(object):
             )
 
 
-    def send_metrics(self, varNamespace, instanceId, instanceType, varMetric,, varValue, unit, dimensions):
+    def send_metrics(self, varNamespace, instanceId, instanceType, varMetric, varValue, unit, dimensions):
         self.connection.put_metric_data(varNamespace, varMetric,
                                     varValue, unit=unit,
                                     dimensions=self.dimensions)
