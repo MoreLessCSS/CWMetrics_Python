@@ -17,12 +17,7 @@ for metric in config['metrics']:
         units = var.getUnit()
         print ("\n")
 
-                           'Unit' : var.getUnit(),
-                           'MetricName' : var.name,
-                           'Value'      : metrics,
-                           'Timestamp'  : datetime.now(),
-                           'Dimensions' : [{'Name' : 'InstanceId', 'Value' : "instanceId",
-                                            'Name' : 'Instance Name', 'Value' : "instanceName"}]
+
 
 
         dimensions = {'Name': 'InstanceId',
