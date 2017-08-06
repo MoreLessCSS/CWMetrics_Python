@@ -23,7 +23,7 @@ def send_metrics(region, varNamespace, instanceId, instanceType, varMetric, varV
                aws_secret_access_key='UZduH/vO4YgmcUHuYWps3m2D8eSBSyriq0meFdg5'
                ),
        #pprint (client)
-       connection.put_metric_data(varNamespace, varMetric, varValue, unit=unit, dimensions=dimensions)
+       self.connection.put_metric_data(varNamespace, varMetric, varValue, unit=unit, dimensions=dimensions)
 
 for metric in config['metrics']:
     # print ("METRIC:\n" + config['metrics'] + "\n")
