@@ -1,7 +1,6 @@
 from datetime import *
 import loadConfig
 import time
-from CWMetricWriter import  *
 from inspect import getmembers
 from pprint import pprint
 from boto.ec2 import cloudwatch
