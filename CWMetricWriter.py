@@ -21,26 +21,14 @@ class CWMetricWriter(object):
         self.send_metrics('string1', 'metadata', metrics, "Milliseconds")
 
     def send_metrics(self, varNamespace, varMetrics):
-        
+
         self.connection.put_metric_data('varNamespace', """[
-                                                                                                                         {
-                                                                                                                             'MetricName': 'Manual_Metric',
-                                                                                                                             'Dimensions': [
-                                                                                                                                 {
-                                                                                                                                     'Name' : 'InstanceId', 'Value' : "instanceId",
-                                                                                                                                     'Name' : 'Instance Name', 'Value' : 'instanceName'
-                                                                                                                                 },
-                                                                                                                             ],
-                                                                                                                             'Timestamp': datetime.now(),
-                                                                                                                             'Value': '123.0',
-                                                                                                                             'StatisticValues': {
-                                                                                                                                 'SampleCount': '123.0',
-                                                                                                                                 'Sum': '123.0',
-                                                                                                                                 'Minimum': '123.0',
-                                                                                                                                 'Maximum': '123.0'
-                                                                                                                             },
-                                                                                                                             'Unit': var.getUnit(),
-                                                                                                                             'StorageResolution': '123'
-                                                                                                                         },]""")
+                                                             {
+                                                                 'MetricName': 'Manual_Metric',
+                                                                 'Timestamp': datetime.now(),
+                                                                 'Value': '123.0',
+                                                                 'Unit': var.getUnit()
+                                                             }]"""
+                                         )
 
 
