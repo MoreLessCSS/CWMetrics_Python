@@ -20,7 +20,7 @@ def connect(region):
 client = connect(config['region'])
 
 
-def send_metrics(self, varNamespace, instanceId, instanceType, varMetric, varValue, unit, dimensions):
+def send_metrics(varNamespace, instanceId, instanceType, varMetric, varValue, unit, dimensions):
                 client.put_metric_data(varNamespace, varMetric,
                                             varValue, unit=unit,
                                             dimensions=dimensions)
