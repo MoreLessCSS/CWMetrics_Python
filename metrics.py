@@ -18,8 +18,8 @@ dimensions = {'InstanceId': InstanceMetaData[0],
 for metric in config['metrics']:
     for moduleConfig in metric:
         moduleName = metric[moduleConfig]['module']
-        mod = __import__(moduleName, fromlist=['my_class'])
-        module = getattr(mod, 'my_class')
+        mod = __import__(moduleName, fromlist=[moduleName])
+        module = getattr(mod, moduleName)
         print (module)
         var= module()
         print (var)
