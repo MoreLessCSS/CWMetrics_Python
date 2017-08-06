@@ -7,7 +7,7 @@ def getConfigFile():
                 data = json.load(data_file)
     except IOError as (errno, strerror):
          print "I/O error({0}): {1}".format(errno, strerror)
-     except:
+    except:
          print "Unexpected error:", sys.exc_info()[0]
          raise
     else:
