@@ -41,7 +41,7 @@ for metric in config['metrics']:
         dimensions = {'Name': 'InstanceId',
                    'Name1': 'InstanceType'}
 
-        #print (metric[moduleConfig])
+        print (metric[moduleConfig]['module'])
 
         # value = send_metrics('varNamespace', 'instanceId', 'instanceType', config['metrics'], metricValue, units, dimensions)
 
