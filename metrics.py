@@ -20,8 +20,8 @@ for metric in config['metrics']:
         moduleName = metric[moduleConfig]['module']
         #module = __import__(moduleName)
         from moduleName import *
-        var = moduleName(metric[moduleConfig], moduleName)
-        
+        var = moduleName.moduleName(metric[moduleConfig], moduleName)
+
         metricValue = var.getMetric()
         units = var.getUnit()
         #print ("\n")
