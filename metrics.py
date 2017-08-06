@@ -1,5 +1,6 @@
 import loadConfig
 from CWMetricWriter import CWMetricWriter
+import sys
 
 try:
     config = loadConfig.getConfigFile()

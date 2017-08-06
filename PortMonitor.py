@@ -1,4 +1,5 @@
 import socket
+import sys
 from MetricSignature import *
 from contextlib import closing
 from inspect import getmembers

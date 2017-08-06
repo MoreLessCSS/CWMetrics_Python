@@ -1,4 +1,5 @@
 import json
+import sys
 import os
 
 
@@ -14,7 +15,7 @@ def getConfigFile():
     except IOError as (errno, strerror):
          print "I/O error({0}): {1}".format(errno, strerror)
     except:
-         
+         print "Unexpected error:", sys.exc_info()[0]
          raise
     else:
          return data
