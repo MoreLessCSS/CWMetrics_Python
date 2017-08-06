@@ -19,7 +19,8 @@ for metric in config['metrics']:
     for moduleConfig in metric:
         moduleName = metric[moduleConfig]['module']
         module = __import__(moduleName)
-        var = module.(moduleName(metric[moduleConfig], moduleName))
+        print (module)
+        var = module.PortMonitor(metric[moduleConfig], moduleName)
 
         metricValue = var.getMetric()
         units = var.getUnit()
