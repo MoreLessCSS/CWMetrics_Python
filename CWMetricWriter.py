@@ -20,9 +20,8 @@ class CWMetricWriter(object):
         self.send_metrics('string1', 'metadata', metrics, "Milliseconds")
 
     def send_metrics(self):
-        self.connection.put_metric_data("""[
+        self.connection.put_metric_data('MySpace', """[
                                                              {
-                                                                 'varNamespace': 'MySpace',
                                                                  'MetricName': 'Manual_Metric',
                                                                  'Timestamp': datetime.now(),
                                                                  'Value': '123.0',
