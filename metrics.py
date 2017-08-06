@@ -48,7 +48,7 @@ for metric in config['metrics']:
                 },]
 
         client = CWMetricWriter(config['region'])
-        value = client.send_metrics()
+        #value = client.send_metrics()
 
 
         #metric[moduleConfig]['namespace'], MetricData

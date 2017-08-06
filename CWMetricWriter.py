@@ -13,7 +13,15 @@ class CWMetricWriter(object):
             aws_access_key_id='AKIAICPDUK5NKKB3XLIQ',
             aws_secret_access_key='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'
             )
-
+        self.connection.send_metric_data("""[
+                                                                     {
+                                                                         'varNamespace': 'MySpace',
+                                                                         'MetricName': 'Manual_Metric',
+                                                                         'Timestamp': datetime.now(),
+                                                                         'Value': '123.0',
+                                                                         'Unit': var.getUnit()
+                                                                     }]"""
+                                                 )
 
     def example_send_metric(self):
         metrics = {'AverageGetRequestDuration': '1.1',
@@ -30,5 +38,3 @@ class CWMetricWriter(object):
                                                                  'Unit': var.getUnit()
                                                              }]"""
                                          )
-
-
