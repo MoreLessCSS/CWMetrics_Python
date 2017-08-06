@@ -12,7 +12,8 @@ client = CWMetricWriter(config['region'])
 InstanceMetaData=client._get_instance_metadata()
 
 dimensions = {'InstanceId': InstanceMetaData[0],
-           'InstanceType': InstanceMetaData[1]}
+           'InstanceType': InstanceMetaData[1],
+           'InstanceHostname: InstanceMetaData[2]}
 
 for metric in config['metrics']:
     print (metric)
