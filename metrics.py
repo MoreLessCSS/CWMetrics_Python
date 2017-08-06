@@ -11,7 +11,7 @@ config = loadConfig.getConfigFile()
 client = CWMetricWriter(config['region'])
 
 for metric in config['metrics']:
-    print ("METRIC:\n" + metric + "\n")
+    print (metric)
     for moduleConfig in metric:
         moduleName = metric[moduleConfig]['module']
         module = __import__(moduleName)
