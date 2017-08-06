@@ -26,7 +26,7 @@ for metric in config['metrics']:
         #print ("\n")
         #pprint (config['metrics'])
 
-
+        client = CWMetricWriter(config['region'])
         value = client.send_metrics('varNamespace', 'instanceId', 'instanceType', moduleConfig, metricValue, units, dimensions)
 
 
