@@ -8,7 +8,6 @@ from boto.ec2 import cloudwatch
 from boto.utils import get_instance_metadata
 
 config = loadConfig.getConfigFile()
-client = connect(config['region'])
 
 def connect(region):
     connection = cloudwatch.connect_to_region(
@@ -16,6 +15,10 @@ def connect(region):
         aws_access_key_id='AKIAICPDUK5NKKB3XLIQ',
         aws_secret_access_key='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'
         )
+
+
+client = connect(config['region'])
+
 
 def send_metrics(self, varNamespace, instanceId, instanceType, varMetric, varValue, unit, dimensions):
                 client.put_metric_data(varNamespace, varMetric,
