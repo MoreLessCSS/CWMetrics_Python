@@ -13,7 +13,7 @@ client = CWMetricWriter(config['region'])
 for metric in config['metrics']:
     print (metric)
     for moduleConfig in metric:
-        print (moduleConfig)
+
         moduleName = metric[moduleConfig]['module']
         module = __import__(moduleName)
         var = module.PortMonitor(metric[moduleConfig], moduleName)
@@ -24,9 +24,9 @@ for metric in config['metrics']:
         dimensions = {'Name': 'InstanceId',
                    'Name1': 'InstanceType'}
 
-        print (metric[moduleConfig]['module'])
-
-       value = client.send_metrics('varNamespace', 'instanceId', 'instanceType', moduleConfig, metricValue, units, dimensions)
+        #print (metric[moduleConfig]['module'])
+        print (moduleConfig)
+        value = client.send_metrics('varNamespace', 'instanceId', 'instanceType', moduleConfig, metricValue, units, dimensions)
 
 
 
