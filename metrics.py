@@ -18,8 +18,10 @@ dimensions = {'InstanceId': InstanceMetaData[0],
 for metric in config['metrics']:
     for moduleConfig in metric:
         moduleName = metric[moduleConfig]['module']
-        module = __import__(moduleName)
-        var = module(metric[moduleConfig], moduleName)
+        #module = __import__(moduleName)
+        from moduleName import *
+        var = moduleName(metric[moduleConfig], moduleName)
+        
         metricValue = var.getMetric()
         units = var.getUnit()
         #print ("\n")
