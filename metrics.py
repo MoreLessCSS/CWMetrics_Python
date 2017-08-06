@@ -48,26 +48,7 @@ for metric in config['metrics']:
                 },]
 
         client = CWMetricWriter(config['region'])
-        value = client.send_metrics('namespaceqq', """[
-                                                                   {
-                                                                       'MetricName': 'Manual_Metric',
-                                                                       'Dimensions': [
-                                                                           {
-                                                                               'Name' : 'InstanceId', 'Value' : "instanceId",
-                                                                               'Name' : 'Instance Name', 'Value' : 'instanceName'
-                                                                           },
-                                                                       ],
-                                                                       'Timestamp': datetime.now(),
-                                                                       'Value': '123.0',
-                                                                       'StatisticValues': {
-                                                                           'SampleCount': '123.0',
-                                                                           'Sum': '123.0',
-                                                                           'Minimum': '123.0',
-                                                                           'Maximum': '123.0'
-                                                                       },
-                                                                       'Unit': var.getUnit(),
-                                                                       'StorageResolution': '123'
-                                                                   },]""")
+        value = client.send_metrics()
 
 
         #metric[moduleConfig]['namespace'], MetricData
