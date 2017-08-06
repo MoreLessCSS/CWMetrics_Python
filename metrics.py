@@ -23,7 +23,7 @@ for metric in config['metrics']:
         print (module)
         var= module()
         print (var)
-        var = module.PortMonitor(metric[moduleConfig], moduleName)
+        var = module(metric[moduleConfig], moduleName)
 
         metricValue = var.getMetric()
         units = var.getUnit()
