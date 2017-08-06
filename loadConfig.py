@@ -5,7 +5,7 @@ import os
 
 def getConfigFile():
     try:
-         appDir = os.path.dirname(os.path.abspath(__file__))
+         str(appDir) = os.path.dirname(os.path.abspath(__file__))
          filename = (appDir + '/config/MasterNode/config.json')
          with open(filename) as data_file:
                 data = json.load(data_file)
