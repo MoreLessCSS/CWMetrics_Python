@@ -13,7 +13,7 @@ for metric in config['metrics']:
         moduleName = metric[moduleConfig]['module']
         module = __import__(moduleName)
         var = module.PortMonitor(metric[moduleConfig], moduleName)
-        metrics = var.getMetric()
+        metricValue = var.getMetric()
         units = var.getUnit()
         print ("\n")
 
@@ -22,7 +22,7 @@ for metric in config['metrics']:
 
         dimensions = {'Name': 'InstanceId',
                    'Name1': 'InstanceType'}
-        value = client.send_metrics('varNamespace', 'instanceId', 'instanceType', metrics, units, dimensions)
+        value = client.send_metrics('varNamespace', 'instanceId', 'instanceType', metric, MetricValue, units, dimensions)
 
 
         #metric[moduleConfig]['namespace'], MetricData

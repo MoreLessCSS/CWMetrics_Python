@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6f88168b-1be9-4664-b571-e538816b41b7" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CWMetricWriter.py" afterPath="$PROJECT_DIR$/CWMetricWriter.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/metrics.py" afterPath="$PROJECT_DIR$/metrics.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -34,11 +35,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="metrics.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="metrics.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/metrics.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+            <state relative-caret-position="255">
+              <caret line="15" column="19" lean-forward="false" selection-start-line="15" selection-start-column="19" selection-end-line="15" selection-end-column="19" />
               <folding />
             </state>
           </provider>
@@ -47,8 +48,8 @@
       <file leaf-file-name="CWMetricWriter.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/CWMetricWriter.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="476">
-              <caret line="28" column="59" lean-forward="true" selection-start-line="27" selection-start-column="12" selection-end-line="28" selection-end-column="59" />
+            <state relative-caret-position="289">
+              <caret line="17" column="88" lean-forward="false" selection-start-line="17" selection-start-column="88" selection-end-line="17" selection-end-column="88" />
               <folding />
             </state>
           </provider>
@@ -84,7 +85,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="scratch_5.txt" pinned="false" current-in-tab="true">
+      <file leaf-file-name="scratch_5.txt" pinned="false" current-in-tab="false">
         <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch_5.txt">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="885">
@@ -140,9 +141,9 @@
         <option value="$PROJECT_DIR$/config.json" />
         <option value="$PROJECT_DIR$/CloudwatchMetricWriter.py" />
         <option value="$PROJECT_DIR$/loadConfig.py" />
+        <option value="$APPLICATION_CONFIG_DIR$/scratches/scratch_5.txt" />
         <option value="$PROJECT_DIR$/CWMetricWriter.py" />
         <option value="$PROJECT_DIR$/metrics.py" />
-        <option value="$APPLICATION_CONFIG_DIR$/scratches/scratch_5.txt" />
       </list>
     </option>
   </component>
@@ -821,14 +822,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CWMetricWriter.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="28" column="59" lean-forward="true" selection-start-line="27" selection-start-column="12" selection-end-line="28" selection-end-column="59" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch_4.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
@@ -837,18 +830,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/metrics.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch_5.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="885">
           <caret line="70" column="96" lean-forward="false" selection-start-line="70" selection-start-column="96" selection-end-line="70" selection-end-column="96" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CWMetricWriter.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="88" lean-forward="false" selection-start-line="17" selection-start-column="88" selection-end-line="17" selection-end-column="88" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/metrics.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="19" lean-forward="false" selection-start-line="15" selection-start-column="19" selection-end-line="15" selection-end-column="19" />
           <folding />
         </state>
       </provider>
