@@ -9,7 +9,6 @@ class CWMetricWriter(object):
         except:
             print "Unexpected error:", sys.exc_info()[0]
             raise
-        
 
     def _get_instance_metadata(self):
         try:
