@@ -18,11 +18,9 @@ dimensions = {'InstanceId': InstanceMetaData[0],
 for metric in config['metrics']:
     for moduleConfig in metric:
         moduleName = metric[moduleConfig]['module']
-        module = __import__(moduleName)
-        print (module)
-        var= module()
-        print (var)
-        var = module.PortMonitor(metric[moduleConfig], moduleName)
+        from moduleName import moduleName
+
+        var = moduleName(metric[moduleConfig], moduleName)
 
         metricValue = var.getMetric()
         units = var.getUnit()
