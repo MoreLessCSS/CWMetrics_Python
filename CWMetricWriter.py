@@ -16,7 +16,7 @@ class CWMetricWriter(object):
 
     def _get_instance_metadata(self):
         metadata = get_instance_metadata()
-        pprint (metadata)
+        pprint (metadata['instance-id'], metadata['instance-type'])
         return metadata['instance-id'], metadata['instance-type']
 
 
@@ -42,7 +42,7 @@ class CWMetricWriter(object):
             print(metrics.values())
 
             metadata = get_instance_metadata()
-            pprint (metadata[0])
+
             response = self.connection.put_metric_data(self.CW_NAMESPACE, metrics.keys(),
                            metrics.values(),
                            unit="Milliseconds",
