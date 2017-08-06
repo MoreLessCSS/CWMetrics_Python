@@ -5,7 +5,7 @@ class CWMetricWriter(object):
 
     def __init__(self, region):
         try:
-            self.connection = cloudwatch.connect_to_region(region)
+            result=self.connection = cloudwatch.connect_to_region(region)
         except:
             print "Unexpected error:", sys.exc_info()[0]
             raise
@@ -22,7 +22,7 @@ class CWMetricWriter(object):
 
     def send_metrics(self, varNamespace, instanceId, instanceType, varMetric, varValue, unit, dimensions):
         try:
-            self.connection.put_metric_data(varNamespace,
+            result=self.connection.put_metric_data(varNamespace,
                                                     varMetric,
                                                     varValue,
                                                     unit=unit,
