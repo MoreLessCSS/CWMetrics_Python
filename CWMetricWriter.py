@@ -9,13 +9,15 @@ class CWMetricWriter(object):
 
     def __init__(self, region):
         self.connection = cloudwatch.connect_to_region(
-            'eu-central-12'
+            'eu-central-1',
+            aws_access_key_id='AKIAICPDUK5NKKB3XLIQ',
+            aws_secret_access_key='UZduH/vO4YgmcUHuYWps3m2D8eSBSyriq0meFdg5'
             )
 
 
     def example_send_metric(self):
-        metrics = {'AverageGetRequestDuration': 1.2,
-                   'AveragePostRequestDuration': 2.2}
+        metrics = {'AverageGetRequestDuration': '1.1',
+                   'AveragePostRequestDuration': '1.2'}
         self.send_metrics('string1', 'metadata', metrics, "Milliseconds")
 
     def send_metrics(self, instance_id, instance_type, metrics, unit):
