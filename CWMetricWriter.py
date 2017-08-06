@@ -7,15 +7,17 @@ class CWMetricWriter(object):
     CW_NAMESPACE='test'
 
     def __init__(self, region):
-            self.connection = cloudwatch.connect_to_region(
-                'eu-central-1',
-                aws_access_key_id='AKIAICPDUK5NKKB3XLIQ',
-                aws_secret_access_key='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'
-                )
+        self.connection = cloudwatch.connect_to_region(
+            'eu-central-1',
+            aws_access_key_id='AKIAICPDUK5NKKB3XLIQ',
+            aws_secret_access_key='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'
+            )
 
     def _get_instance_metadata(self):
-            metadata = get_instance_metadata()
-            return metadata['instance-id'], metadata['instance-type']
+        metadata = get_instance_metadata()
+        pprint (metadata)
+        return metadata['instance-id'], metadata['instance-type']
+
 
     def send_metrics_old(self):
             MetricData=[
