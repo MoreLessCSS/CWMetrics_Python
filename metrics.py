@@ -20,9 +20,6 @@ for metric in config['metrics']:
         moduleName = metric[moduleConfig]['module']
         mod = __import__(moduleName, fromlist=[moduleName])
         module = getattr(mod, moduleName)
-        print (module)
-     
-        print (var)
         var = module(metric[moduleConfig], moduleName)
 
         metricValue = var.getMetric()
