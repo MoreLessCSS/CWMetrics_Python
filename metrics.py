@@ -45,13 +45,13 @@ for metric in config['metrics']:
                     },
                     'Unit': var.getUnit(),
                     'StorageResolution': 123
-                }]
+                },]
         pprint(MetricData)
         print ("new\n")
         pprint(pushMetrics)
         print ("new\n")
         pprint(pushMetrics[0])
         client = CWMetricWriter(config['region'])
-        value = client.send_metrics(metric[moduleConfig]['namespace'], pushMetrics[0])
+        value = client.send_metrics(metric[moduleConfig]['namespace'], MetricData)
 
         #metric[moduleConfig]['namespace'], MetricData
