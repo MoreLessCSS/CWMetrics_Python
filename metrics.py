@@ -6,9 +6,8 @@ from inspect import getmembers
 from pprint import pprint
 
 config = loadConfig.getConfigFile()
+client = CWMetricWriter(config['region'])
 
-
-pushMetrics = []
 for metric in config['metrics']:
     for moduleConfig in metric:
         moduleName = metric[moduleConfig]['module']
@@ -17,7 +16,7 @@ for metric in config['metrics']:
         metrics = var.getMetric()
         units = var.getUnit()
         print ("\n")
-        pushMetrics.append({
+
                            'Unit' : var.getUnit(),
                            'MetricName' : var.name,
                            'Value'      : metrics,
@@ -25,30 +24,10 @@ for metric in config['metrics']:
                            'Dimensions' : [{'Name' : 'InstanceId', 'Value' : "instanceId",
                                             'Name' : 'Instance Name', 'Value' : "instanceName"}]
 
-                          })
-        MetricData1=[
-                {
-                    'MetricName': 'Manual_Metric',
-                    'Dimensions': [
-                        {
-                            'Name' : 'InstanceId', 'Value' : "instanceId",
-                            'Name' : 'Instance Name', 'Value' : 'instanceName'
-                        },
-                    ],
-                    'Timestamp': datetime.now(),
-                    'Value': '123.0',
-                    'StatisticValues': {
-                        'SampleCount': '123.0',
-                        'Sum': '123.0',
-                        'Minimum': '123.0',
-                        'Maximum': '123.0'
-                    },
-                    'Unit': var.getUnit(),
-                    'StorageResolution': '123'
-                },]
 
-        client = CWMetricWriter(config['region'])
-        value = client.send_metrics()
+        dimensions = {'Name': 'InstanceId',
+                   'Name1': 'InstanceType'}
+        value = client.send_metrics('varNamespace', 'instanceId', 'instanceType', metrics, units, dimensions)
 
 
         #metric[moduleConfig]['namespace'], MetricData

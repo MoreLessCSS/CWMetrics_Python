@@ -14,17 +14,17 @@ class CWMetricWriter(object):
             aws_secret_access_key='UZduH/vO4YgmcUHuYWps3m2D8eSBSyriq0meFdg5'
             )
 
-    def example_send_metric(self):
-        metrics = {'AverageGetRequestDuration': '1.1',
-                   'AveragePostRequestDuration': '1.2'}
-        self.send_metrics('string1', 'metadata', metrics, "Milliseconds")
 
-    def send_metrics(self):
-        self.connection.put_metric_data("""[
-                                                             {
-                                                                 'MetricName': 'Manual_Metric',
-                                                                 'Timestamp': datetime.now(),
-                                                                 'Value': '123.0',
-                                                                 'Unit': var.getUnit()
-                                                             }]""", 'MySpace'
-                                         )
+    def send_metrics(self, varNamespace, instanceId, instanceType, varMetrics, unit, dimensions):
+        self.connection.put_metric_data(varNamespace, varMetrics.keys(),
+                                    varMetrics.values(), unit=unit,
+                                    dimensions=self.dimensions)
+
+
+
+
+
+    def example_send_metric(self):
+            metrics = {'AverageGetRequestDuration': '1.1',
+                       'AveragePostRequestDuration': '1.2'}
+            self.send_metrics('string1', 'metadata', metrics, "Milliseconds")
