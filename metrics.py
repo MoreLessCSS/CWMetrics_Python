@@ -11,7 +11,7 @@ config = loadConfig.getConfigFile()
 client = CWMetricWriter(config['region'])
 
 for metric in config['metrics']:
-    # print ("METRIC:\n" + config['metrics'] + "\n")
+    print ("METRIC:\n" + metric + "\n")
     for moduleConfig in metric:
         moduleName = metric[moduleConfig]['module']
         module = __import__(moduleName)
@@ -25,7 +25,7 @@ for metric in config['metrics']:
 
         print (metric[moduleConfig]['module'])
 
-        value = client.send_metrics('varNamespace', 'instanceId', 'instanceType', metric[moduleConfig]['module'], metricValue, units, dimensions)
+       # value = client.send_metrics('varNamespace', 'instanceId', 'instanceType', metric[moduleConfig], metricValue, units, dimensions)
 
 
 
