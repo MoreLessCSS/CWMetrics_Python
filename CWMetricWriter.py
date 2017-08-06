@@ -20,10 +20,10 @@ class CWMetricWriter(object):
                    'AveragePostRequestDuration': '1.2'}
         self.send_metrics('string1', 'metadata', metrics, "Milliseconds")
 
-    def send_metrics(self, namespace, metrics):
-        self.namespace=namespace
-        self.metrics=metrics
-        pprint (self.metrics)
-        self.connection.put_metric_data(self.namespace, self.metrics)
+    def send_metrics(self, varNamespace, varMetrics):
+        self.namespace=var.Namespace
+        self.metrics=var.Metrics
+        pprint (self.varMetrics)
+        self.connection.put_metric_data(self.varNamespace, self.varMetrics)
 
 
