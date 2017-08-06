@@ -32,19 +32,19 @@ for metric in config['metrics']:
                     'Dimensions': [
                         {
                             'Name' : 'InstanceId', 'Value' : "instanceId",
-                            'Name' : 'Instance Name', 'Value' : "instanceName"
+                            'Name' : 'Instance Name', 'Value' : 'instanceName'
                         },
                     ],
                     'Timestamp': datetime.now(),
                     'Value': '123.0',
                     'StatisticValues': {
-                        'SampleCount': 123.0,
-                        'Sum': 123.0,
-                        'Minimum': 123.0,
-                        'Maximum': 123.0
+                        'SampleCount': '123.0',
+                        'Sum': '123.0',
+                        'Minimum': '123.0',
+                        'Maximum': '123.0'
                     },
                     'Unit': var.getUnit(),
-                    'StorageResolution': 123
+                    'StorageResolution': '123'
                 },]
         pprint(MetricData)
         print ("new\n")
@@ -52,6 +52,6 @@ for metric in config['metrics']:
         print ("new\n")
         pprint(pushMetrics[0])
         client = CWMetricWriter(config['region'])
-        value = client.send_metrics(metric[moduleConfig]['namespace'], MetricData)
+        value = client.send_metrics('namespaceqq', MetricData)
 
         #metric[moduleConfig]['namespace'], MetricData
