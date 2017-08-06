@@ -25,9 +25,6 @@ def send_metrics(self, varNamespace, instanceId, instanceType, varMetric, varVal
                                             varValue, unit=unit,
                                             dimensions=dimensions)
 
-for i in config:
-    print ("\n\n\nNEW" + i + "\n\n\n")
-
 for metric in config['metrics']:
     # print ("METRIC:\n" + config['metrics'] + "\n")
     for moduleConfig in metric:
@@ -43,7 +40,7 @@ for metric in config['metrics']:
 
         print (metric[moduleConfig]['module'])
 
-        # value = send_metrics('varNamespace', 'instanceId', 'instanceType', config['metrics'], metricValue, units, dimensions)
+        value = send_metrics('varNamespace', 'instanceId', 'instanceType', metric[moduleConfig]['module'], metricValue, units, dimensions)
 
 
 
