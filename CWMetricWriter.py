@@ -4,7 +4,7 @@ from boto.utils import get_instance_metadata
 class CWMetricWriter(object):
 
     def __init__(self, region):
-        self.connection = cloudwatch.connect_to_region(region))
+        self.connection = cloudwatch.connect_to_region(region)
 
     def _get_instance_metadata(self):
         metadata = get_instance_metadata()
