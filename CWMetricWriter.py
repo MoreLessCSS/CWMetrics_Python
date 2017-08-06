@@ -15,38 +15,6 @@ class CWMetricWriter(object):
             )
 
 
-    def send_metrics_old(self):
-            MetricData=[
-                        {
-                            'MetricName': 'Metrik',
-                            'Dimensions': [
-                                {
-                                    'Name': 'string1',
-                                    'Value': 'what ever'
-                                },
-                            ],
-                            'Value': '1',
-                            'Statistics': 'Average',
-                            'Unit': 'None'
-                        },
-                    ]
-            metrics = {'AverageGetRequestDuration': 1.2,
-                        'AveragePostRequestDuration': 2.2}
-
-            print(metrics.keys())
-            print(metrics.values())
-
-            metadata = get_instance_metadata()
-
-            response = self.connection.put_metric_data(self.CW_NAMESPACE, metrics.keys(),
-                           metrics.values(),
-                           unit="Milliseconds",
-                           dimensions={"InstanceType": "instance_type", "InstanceId": "instance_id"})
-            print(response)
-            pprint(response)
-
-    #             resp=self.connection.put_metric_data('MyName', 'MyData', metrics, "Milliseconds")
-
     def example_send_metric(self):
         metrics = {'AverageGetRequestDuration': 1.2,
                    'AveragePostRequestDuration': 2.2}
