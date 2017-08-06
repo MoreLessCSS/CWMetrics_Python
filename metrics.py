@@ -1,5 +1,5 @@
 import loadConfig
-from CWMetricWriter import *
+from CWMetricWriter import CWMetricWriter
 
 config = loadConfig.getConfigFile()
 client = CWMetricWriter(config['region'])
