@@ -6,8 +6,8 @@ client = CWMetricWriter(config['region'])
 InstanceMetaData=client._get_instance_metadata()
 
 dimensions = {'Instance_Id': InstanceMetaData[0],
-           'Instance_Type': InstanceMetaData[1],
-           'Hostname': InstanceMetaData[2]}
+              'Instance_Type': InstanceMetaData[1],
+              'Hostname': InstanceMetaData[2]}
 
 for metric in config['metrics']:
     for moduleConfig in metric:
@@ -18,6 +18,10 @@ for metric in config['metrics']:
         metricValue = var.getMetric()
         units = var.getUnit()
         client = CWMetricWriter(config['region'])
-        value = client.send_metrics(metric[moduleConfig]['namespace'], 'instanceId', 'instanceType', moduleConfig, metricValue, units, dimensions)
-
-        #metric[moduleConfig]['namespace'], MetricData
+        value = client.send_metrics(metric[moduleConfig]['namespace'],
+                                   'instanceId',
+                                   'instanceType',
+                                   moduleConfig,
+                                   metricValue,
+                                   units,
+                                   dimensions)
