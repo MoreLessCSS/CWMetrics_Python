@@ -26,7 +26,7 @@ def send_metrics(self, varNamespace, instanceId, instanceType, varMetric, varVal
                                             dimensions=dimensions)
 
 for metric in config['metrics']:
-    #print ("METRIC:\n" + config['metrics'] + "\n")
+    print ("METRIC:\n" + config['metrics'] + "\n")
     for moduleConfig in metric:
         moduleName = metric[moduleConfig]['module']
         module = __import__(moduleName)
