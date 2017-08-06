@@ -21,7 +21,9 @@ class CWMetricWriter(object):
                                     dimensions=dimensions)
 
 
-
+  def _get_instance_metadata(self):
+        metadata = get_instance_metadata()
+        return metadata['instance-id'], metadata['instance-type', metadata['instance-name']
 
 
     def example_send_metric(self):

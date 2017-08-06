@@ -9,6 +9,10 @@ from boto.utils import get_instance_metadata
 
 config = loadConfig.getConfigFile()
 client = CWMetricWriter(config['region'])
+InstanceMetaData=client._get_instance_metadata()
+
+dimensions = {'InstanceId': InstanceMetaData[0],
+           'InstanceType': InstanceMetaData[1]}
 
 for metric in config['metrics']:
     print (metric)
@@ -21,11 +25,8 @@ for metric in config['metrics']:
         units = var.getUnit()
         #print ("\n")
         #pprint (config['metrics'])
-        dimensions = {'Name': 'InstanceId',
-                   'Name1': 'InstanceType'}
 
-        #print (metric[moduleConfig]['module'])
-        print (moduleConfig)
+
         value = client.send_metrics('varNamespace', 'instanceId', 'instanceType', moduleConfig, metricValue, units, dimensions)
 
 
