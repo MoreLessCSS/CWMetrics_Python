@@ -28,7 +28,7 @@ for metric in config['metrics']:
                           })
         MetricData=[
                 {
-                    'MetricName': 'test',
+                    'MetricName': 'Manual_Metric',
                     'Dimensions': [
                         {
                             'Name' : 'InstanceId', 'Value' : "instanceId",
@@ -51,6 +51,6 @@ for metric in config['metrics']:
 
 
         client = CWMetricWriter(config['region'])
-        value = client.example_send_metric()
+        value = client.send_metric(metric[moduleConfig]['namespace'], MetricData)
 
         #metric[moduleConfig]['namespace'], MetricData

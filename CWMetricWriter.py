@@ -20,7 +20,7 @@ class CWMetricWriter(object):
                    'AveragePostRequestDuration': '1.2'}
         self.send_metrics('string1', 'metadata', metrics, "Milliseconds")
 
-    def send_metrics(self, instance_id, instance_type, metrics, unit):
-        self.connection.put_metric_data(self.CW_NAMESPACE, metrics.keys(), metrics.values(), unit=unit, dimensions={"InstanceType": instance_type, "InstanceId": instance_id})
+    def send_metrics(self, namespace, metrics):
+        self.connection.put_metric_data(namespace, metrics})
 
 
