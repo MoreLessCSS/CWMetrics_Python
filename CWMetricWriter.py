@@ -26,4 +26,4 @@ class CWMetricWriter(object):
             print(keys)
             print(values)
 
-        return metadata['instance-id'], metadata['instance-type'], ['instance-hostname']
+        return metadata['instance-id'], metadata['instance-type'], ['hostname']
