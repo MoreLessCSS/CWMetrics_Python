@@ -26,7 +26,7 @@ def send_metrics(self, varNamespace, instanceId, instanceType, varMetric, varVal
                                             dimensions=dimensions)
 
 for i in config:
-    print ("\n\n\n" + i + \n\n\n)
+    print ("\n\n\nNEW" + i + "\n\n\n")
 
 for metric in config['metrics']:
     # print ("METRIC:\n" + config['metrics'] + "\n")
