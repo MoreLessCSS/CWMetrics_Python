@@ -20,6 +20,8 @@ for metric in config['metrics']:
         moduleName = metric[moduleConfig]['module']
         module = __import__(moduleName)
         print (module)
+        var= module()
+        print (var)
         var = module.PortMonitor(metric[moduleConfig], moduleName)
 
         metricValue = var.getMetric()
