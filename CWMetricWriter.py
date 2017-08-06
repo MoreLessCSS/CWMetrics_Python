@@ -23,7 +23,7 @@ class CWMetricWriter(object):
     def send_metrics(self, namespace, metrics):
         self.namespace=namespace
         self.metrics=metrics
-        #pprint (self.metrics)
+        pprint (self.metrics)
         self.connection.put_metric_data(self.namespace, self.metrics)
 
 
