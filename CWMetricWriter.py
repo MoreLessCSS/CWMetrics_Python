@@ -10,7 +10,7 @@ class CWMetricWriter(object):
     def __init__(self, region):
         self.connection = cloudwatch.connect_to_region(
             'eu-central-1',
-            aws_access_key_id='AKIAICPDUK5NKKB3XLIQ',
+            aws_access_key_id='1AKIAICPDUK5NKKB3XLIQ',
             aws_secret_access_key='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'
             )
 

@@ -47,8 +47,8 @@
       <file leaf-file-name="CWMetricWriter.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/CWMetricWriter.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" column="23" lean-forward="true" selection-start-line="7" selection-start-column="23" selection-end-line="7" selection-end-column="23" />
+            <state relative-caret-position="204">
+              <caret line="12" column="32" lean-forward="false" selection-start-line="12" selection-start-column="32" selection-end-line="12" selection-end-column="32" />
               <folding />
             </state>
           </provider>
@@ -111,8 +111,8 @@
         <option value="$PROJECT_DIR$/CloudwatchMetricWriter.py" />
         <option value="$PROJECT_DIR$/loadConfig.py" />
         <option value="$PROJECT_DIR$/metrics.py" />
-        <option value="$PROJECT_DIR$/CWMetricWriter.py" />
         <option value="$APPLICATION_CONFIG_DIR$/scratches/scratch_5.txt" />
+        <option value="$PROJECT_DIR$/CWMetricWriter.py" />
       </list>
     </option>
   </component>
@@ -815,8 +815,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/CWMetricWriter.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="23" lean-forward="true" selection-start-line="7" selection-start-column="23" selection-end-line="7" selection-end-column="23" />
+        <state relative-caret-position="204">
+          <caret line="12" column="32" lean-forward="false" selection-start-line="12" selection-start-column="32" selection-end-line="12" selection-end-column="32" />
           <folding />
         </state>
       </provider>
