@@ -18,6 +18,6 @@ for metric in config['metrics']:
         metricValue = var.getMetric()
         units = var.getUnit()
         client = CWMetricWriter(config['region'])
-        value = client.send_metrics('varNamespace', 'instanceId', 'instanceType', moduleConfig, metricValue, units, dimensions)
+        value = client.send_metrics(metric[moduleConfig]['namespace'], 'instanceId', 'instanceType', moduleConfig, metricValue, units, dimensions)
 
         #metric[moduleConfig]['namespace'], MetricData
