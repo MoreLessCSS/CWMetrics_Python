@@ -14,12 +14,16 @@ def connect(region):
         aws_access_key_id='AKIAICPDUK5NKKB3XLIQ',
         aws_secret_access_key='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'
         ),
-    return connection
 
-def send_metrics(varNamespace, instanceId, instanceType, varMetric, varValue, unit, dimensions):
-       client = connect(config['region'])
+
+def send_metrics(region, varNamespace, instanceId, instanceType, varMetric, varValue, unit, dimensions):
+       connection = cloudwatch.connect_to_region(
+               'eu-central-1',
+               aws_access_key_id='AKIAICPDUK5NKKB3XLIQ',
+               aws_secret_access_key='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'
+               ),
        #pprint (client)
-       client.put_metric_data(varNamespace, varMetric, varValue, unit=unit, dimensions=dimensions)
+       connection.put_metric_data(varNamespace, varMetric, varValue, unit=unit, dimensions=dimensions)
 
 for metric in config['metrics']:
     # print ("METRIC:\n" + config['metrics'] + "\n")
@@ -36,7 +40,7 @@ for metric in config['metrics']:
 
         print (metric[moduleConfig]['module'])
 
-        value = send_metrics('varNamespace', 'instanceId', 'instanceType', metric[moduleConfig]['module'], metricValue, units, dimensions)
+        value = send_metrics('eu-central-1', varNamespace', 'instanceId', 'instanceType', metric[moduleConfig]['module'], metricValue, units, dimensions)
 
 
 
