@@ -13,6 +13,7 @@ client = CWMetricWriter(config['region'])
 for metric in config['metrics']:
     print (metric)
     for moduleConfig in metric:
+        print (moduleConfig)
         moduleName = metric[moduleConfig]['module']
         module = __import__(moduleName)
         var = module.PortMonitor(metric[moduleConfig], moduleName)
