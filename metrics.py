@@ -26,7 +26,7 @@ for metric in config['metrics']:
 
         print (metric[moduleConfig]['module'])
 
-       # value = client.send_metrics('varNamespace', 'instanceId', 'instanceType', metric[moduleConfig], metricValue, units, dimensions)
+       value = client.send_metrics('varNamespace', 'instanceId', 'instanceType', moduleConfig, metricValue, units, dimensions)
 
 
 
