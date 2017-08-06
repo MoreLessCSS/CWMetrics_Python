@@ -1,5 +1,5 @@
 import json
-import sys
+from sys import *
 import os
 
 
