@@ -7,6 +7,7 @@ def getConfigFile():
     try:
          str(appDir) = os.path.dirname(os.path.abspath(__file__))
          filename = (appDir + '/config/MasterNode/config.json')
+         print ("filename:" + filename + "\n")
          with open(filename) as data_file:
                 data = json.load(data_file)
     except IOError as (errno, strerror):
