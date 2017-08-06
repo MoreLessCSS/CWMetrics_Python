@@ -1,6 +1,7 @@
 from boto.ec2 import cloudwatch
 from boto.utils import get_instance_metadata
 from datetime import *
+import pprint
 
 
 class CWMetricWriter(object):
