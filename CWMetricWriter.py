@@ -9,7 +9,7 @@ class CWMetricWriter(object):
 
     def __init__(self, region):
         self.connection = cloudwatch.connect_to_region(
-            'eu-central-1'
+            'eu-central-12'
             )
 
 
