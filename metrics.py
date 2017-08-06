@@ -14,7 +14,7 @@ def connect(region):
         aws_access_key_id='AKIAICPDUK5NKKB3XLIQ',
         aws_secret_access_key='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'
         ),
-     return connection
+    return connection
 
 def send_metrics(varNamespace, instanceId, instanceType, varMetric, varValue, unit, dimensions):
        client = connect(config['region'])
