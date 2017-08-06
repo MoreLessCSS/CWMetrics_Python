@@ -5,11 +5,11 @@ class CWMetricWriter(object):
 
     def __init__(self, region):
         try:
-            result=self.connection = cloudwatch.connect_to_region(region)
+            self.connection = cloudwatch.connect_to_region(region)
         except:
             print "Unexpected error:", sys.exc_info()[0]
             raise
-        return result
+        return self.connection
 
     def _get_instance_metadata(self):
         try:
