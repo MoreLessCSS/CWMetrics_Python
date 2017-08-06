@@ -5,9 +5,9 @@ config = loadConfig.getConfigFile()
 client = CWMetricWriter(config['region'])
 InstanceMetaData=client._get_instance_metadata()
 
-dimensions = {'InstanceId': InstanceMetaData[0],
-           'InstanceType': InstanceMetaData[1],
-           'InstanceHostname': InstanceMetaData[2]}
+dimensions = {'Instance_Id': InstanceMetaData[0],
+           'Instance_Type': InstanceMetaData[1],
+           'Hostname': InstanceMetaData[2]}
 
 for metric in config['metrics']:
     for moduleConfig in metric:
