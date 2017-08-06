@@ -13,14 +13,13 @@ def connect(region):
         'eu-central-1',
         aws_access_key_id='AKIAICPDUK5NKKB3XLIQ',
         aws_secret_access_key='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'
-        )
-
-
+        ),
+     return connection
 
 def send_metrics(varNamespace, instanceId, instanceType, varMetric, varValue, unit, dimensions):
        client = connect(config['region'])
-       pprint (client)
-       #client.client.put_metric_data(varNamespace, varMetric, varValue, unit=unit, dimensions=dimensions)
+       #pprint (client)
+       client.put_metric_data(varNamespace, varMetric, varValue, unit=unit, dimensions=dimensions)
 
 for metric in config['metrics']:
     # print ("METRIC:\n" + config['metrics'] + "\n")
