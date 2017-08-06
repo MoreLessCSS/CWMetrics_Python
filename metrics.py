@@ -36,12 +36,12 @@ for metric in config['metrics']:
         var = module.PortMonitor(metric[moduleConfig], moduleName)
         metricValue = var.getMetric()
         units = var.getUnit()
-        print ("\n")
-        pprint (config['metrics'])
+        #print ("\n")
+        #pprint (config['metrics'])
         dimensions = {'Name': 'InstanceId',
                    'Name1': 'InstanceType'}
 
-        print (metric[moduleConfig])
+        #print (metric[moduleConfig])
 
         # value = send_metrics('varNamespace', 'instanceId', 'instanceType', config['metrics'], metricValue, units, dimensions)
 
