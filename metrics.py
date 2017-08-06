@@ -47,6 +47,7 @@ for metric in config['metrics']:
                     'StorageResolution': 123
                 }]
         pprint(MetricData)
+        print ("new\n")
         pprint(pushMetrics)
 
         client = CWMetricWriter(config['region'])
