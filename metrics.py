@@ -36,7 +36,7 @@ for metric in config['metrics']:
                         },
                     ],
                     'Timestamp': datetime.now(),
-                    'Value': 123.0,
+                    'Value': '123.0',
                     'StatisticValues': {
                         'SampleCount': 123.0,
                         'Sum': 123.0,
@@ -51,6 +51,6 @@ for metric in config['metrics']:
 
 
         client = CWMetricWriter(config['region'])
-        value = client.send_metrics(metric[moduleConfig]['namespace'], MetricData)
+        value = client.send_metrics(metric[moduleConfig]['namespace'], MetricData[0])
 
         #metric[moduleConfig]['namespace'], MetricData
