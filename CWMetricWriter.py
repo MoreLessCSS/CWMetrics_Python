@@ -49,10 +49,7 @@ class CWMetricWriter(object):
 
     #             resp=self.connection.put_metric_data('MyName', 'MyData', metrics, "Milliseconds")
 
-
     def send_metrics(self, instance_id, instance_type, metrics, unit):
-            self.connection.put_metric_data(self.CW_NAMESPACE, metrics.keys(),
-                                metrics.values(), unit=unit,
-                                dimensions={"InstanceType": instance_type, "InstanceId": instance_id})
+        self.connection.put_metric_data(self.CW_NAMESPACE, metrics.keys(), metrics.values(), unit=unit, dimensions={"InstanceType": instance_type, "InstanceId": instance_id})
 
 
