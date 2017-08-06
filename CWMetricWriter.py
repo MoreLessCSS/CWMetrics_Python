@@ -8,9 +8,7 @@ class CWMetricWriter(object):
 
     def _get_instance_metadata(self):
         metadata = get_instance_metadata()
-        return metadata['instance-id'],
-                        metadata['instance-type'],
-                        metadata['hostname']
+        return metadata['instance-id'], metadata['instance-type'], metadata['hostname']
 
     def send_metrics(self, varNamespace, instanceId, instanceType, varMetric, varValue, unit, dimensions):
         self.connection.put_metric_data(varNamespace,
