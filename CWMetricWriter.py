@@ -25,8 +25,3 @@ class CWMetricWriter(object):
         metadata = get_instance_metadata()
         return metadata['instance-id'], metadata['instance-type', metadata['instance-name']
 
-
-    def example_send_metric(self):
-            metrics = {'AverageGetRequestDuration': '1.1',
-                       'AveragePostRequestDuration': '1.2'}
-            self.send_metrics('string1', 'metadata', metrics, "Milliseconds")
