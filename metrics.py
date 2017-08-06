@@ -21,7 +21,7 @@ for metric in config['metrics']:
         mod = __import__(moduleName, fromlist=[moduleName])
         module = getattr(mod, moduleName)
         print (module)
-        var= module()
+     
         print (var)
         var = module(metric[moduleConfig], moduleName)
 
