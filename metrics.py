@@ -46,11 +46,7 @@ for metric in config['metrics']:
                     'Unit': var.getUnit(),
                     'StorageResolution': '123'
                 },]
-        pprint(MetricData)
-        print ("new\n")
-        pprint(pushMetrics)
-        print ("new\n")
-        pprint(pushMetrics[0])
+
         client = CWMetricWriter(config['region'])
         value = client.send_metrics('namespaceqq', MetricData=[
                                                                    {
@@ -72,5 +68,6 @@ for metric in config['metrics']:
                                                                        'Unit': var.getUnit(),
                                                                        'StorageResolution': '123'
                                                                    },])
+
 
         #metric[moduleConfig]['namespace'], MetricData
