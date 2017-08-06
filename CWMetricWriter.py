@@ -7,11 +7,11 @@ class CWMetricWriter(object):
     CW_NAMESPACE='test'
 
     def __init__(self, region):
-        self.connection = cloudwatch.connect_to_region(
-            'eu-central-1',
-            aws_access_key_id='AKIAICPDUK5NKKB3XLIQ',
-            aws_secret_access_key='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'
-            )
+            self.connection = cloudwatch.connect_to_region(
+                'eu-central-1',
+                aws_access_key_id='AKIAICPDUK5NKKB3XLIQ',
+                aws_secret_access_key='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'
+                )
 
     def _get_instance_metadata(self):
             metadata = get_instance_metadata()
@@ -36,7 +36,10 @@ class CWMetricWriter(object):
                         'AveragePostRequestDuration': 2.2}
 
             print(metrics.keys())
+            print(metrics.values())
+
             metadata = get_instance_metadata()
+            pprint (metadata)
             response = self.connection.put_metric_data(self.CW_NAMESPACE, metrics.keys(),
                            metrics.values(),
                            unit="Milliseconds",
@@ -48,12 +51,8 @@ class CWMetricWriter(object):
 
 
     def send_metrics(self, instance_id, instance_type, metrics, unit):
-        self.connection.put_metric_data(self.CW_NAMESPACE, metrics.keys(),
-                            metrics.values(), unit=unit,
-                            dimensions={"InstanceType": instance_type, "InstanceId": instance_id})
+            self.connection.put_metric_data(self.CW_NAMESPACE, metrics.keys(),
+                                metrics.values(), unit=unit,
+                                dimensions={"InstanceType": instance_type, "InstanceId": instance_id})
 
-    def example_send_metric(self):
-        metadata = self._get_instance_metadata()
-        metrics = {'AverageGetRequestDuration': 1.2,
-                   'AveragePostRequestDuration': 2.2}
-        self.send_metrics(metadata[0], metadata[1], metrics, "Milliseconds")
+
