@@ -23,7 +23,7 @@ class CWMetricWriter(object):
     def _get_instance_metadata(self):
         metadata = get_instance_metadata()
         for keys,values in metadata.items():
-            print(keys)
-            print(values)
+            print(keys + " : " + values)
+            #print(values)
 
         return metadata['instance-id'], metadata['instance-type'], metadata['hostname']
