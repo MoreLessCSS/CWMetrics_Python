@@ -16,7 +16,7 @@ def connect(region):
         ),
 
 
-def send_metrics(region, varNamespace, instanceId, instanceType, varMetric, varValue, unit, dimensions):
+def send_metrics(self, region, varNamespace, instanceId, instanceType, varMetric, varValue, unit, dimensions):
        connection = cloudwatch.connect_to_region(
                'eu-central-1',
                aws_access_key_id='AKIAICPDUK5NKKB3XLIQ',
