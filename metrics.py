@@ -26,7 +26,7 @@ for metric in config['metrics']:
                                             'Name' : 'Instance Name', 'Value' : "instanceName"}]
 
                           })
-        MetricData=[
+        MetricData=
                 {
                     'MetricName': 'Manual_Metric',
                     'Dimensions': [
@@ -45,12 +45,11 @@ for metric in config['metrics']:
                     },
                     'Unit': var.getUnit(),
                     'StorageResolution': 123
-                },
-            ]
+                }
         pprint(pushMetrics)
 
 
         client = CWMetricWriter(config['region'])
-        value = client.send_metrics(metric[moduleConfig]['namespace'], MetricData[0])
+        value = client.send_metrics(metric[moduleConfig]['namespace'], MetricData)
 
         #metric[moduleConfig]['namespace'], MetricData
