@@ -21,8 +21,8 @@ class CWMetricWriter(object):
         self.send_metrics('string1', 'metadata', metrics, "Milliseconds")
 
     def send_metrics(self, varNamespace, varMetrics):
-        self.namespace=var.Namespace
-        self.metrics=var.Metrics
+        self.namespace=varNamespace
+        self.metrics=varMetrics
         pprint (self.varMetrics)
         self.connection.put_metric_data(self.varNamespace, self.varMetrics)
 
