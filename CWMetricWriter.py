@@ -20,8 +20,7 @@ class CWMetricWriter(object):
                    'AveragePostRequestDuration': '1.2'}
         self.send_metrics('string1', 'metadata', metrics, "Milliseconds")
 
-    def send_metrics(self, varNamespace, varMetrics):
-
+    def send_metrics(self):
         self.connection.send_metric_data("""[
                                                              {
                                                                  'varNamespace': 'MySpace',
