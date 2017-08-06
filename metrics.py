@@ -17,12 +17,9 @@ for metric in config['metrics']:
         units = var.getUnit()
         print ("\n")
 
-
-
-
         dimensions = {'Name': 'InstanceId',
                    'Name1': 'InstanceType'}
-        value = client.send_metrics('varNamespace', 'instanceId', 'instanceType', metric, metricValue, units, dimensions)
+        value = client.send_metrics('varNamespace', 'instanceId', 'instanceType', metric.metric, metricValue, units, dimensions)
 
 
         #metric[moduleConfig]['namespace'], MetricData
